@@ -10,7 +10,7 @@ export default function VLCFooter() {
 
           {/* Brand */}
           <div className="md:col-span-1">
-            <img src="https://media.base44.com/images/public/69c3529506deea33bf4cab54/dc2d3fdfc_xcdfdf3.jpg"
+            <img src="https://res.cloudinary.com/daznfclhz/image/upload/v1776545325/xcdfdf_3_xbky0u.jpg"
               alt="The Venture Learning Collective"
               className="h-14 w-auto object-contain mb-4" />
             <p className="font-display text-sm leading-[1.6] text-obsidian/70 max-w-xs">

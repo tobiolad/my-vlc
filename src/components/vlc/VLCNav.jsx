@@ -17,7 +17,7 @@ export default function VLCNav() {
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-10 h-16" aria-label="Main navigation">
         {/* Logo */}
         <a href="#">
-          <img src="https://media.base44.com/images/public/69c3529506deea33bf4cab54/dc2d3fdfc_xcdfdf3.jpg"
+          <img src="https://res.cloudinary.com/daznfclhz/image/upload/v1776545325/xcdfdf_3_xbky0u.jpg"
             alt="The Venture Learning Collective"
             className="h-12 w-auto object-contain" />
         </a>

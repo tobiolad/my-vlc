@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ArrowRight, CheckCircle } from "lucide-react";
-import { base44 } from "@/api/base44Client";
 
 function Reveal({ children, delay = 0 }) {
   const ref = useRef(null);
@@ -46,14 +45,22 @@ export default function VLCApply() {
   async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
-    await base44.entities.ApplicationSubmission.create(form);
-    await base44.integrations.Core.SendEmail({
-      to: "tobi@datafellowsai.com",
-      subject: `New VLC Application — ${form.name}`,
-      body: `New application submitted:\n\nName: ${form.name}\nEmail: ${form.email}\nType: ${form.type}\nMessage: ${form.message || "—"}`,
-    });
+    try {
+      await fetch("https://formspree.io/f/xnjlvdgl", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          type: form.type,
+          message: form.message || "—",
+        }),
+      });
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Form submission error:", err);
+    }
     setLoading(false);
-    setSubmitted(true);
   }
 
   return (
