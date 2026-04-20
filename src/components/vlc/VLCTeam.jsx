@@ -66,22 +66,17 @@ export default function VLCTeam() {
           <div className="lg:col-span-7 lg:pt-2">
             <Reveal delay={0.2}>
               <p className="font-display text-lg leading-[1.6] text-obsidian/80">
-                Funding is not just access. It is a capability. We help founders understand
-                how funding programs evaluate projects, what makes a project viable, and how
-                to align with institutional priorities. Funding becomes a skill.
+                Funding is not just access. It is a capability. We help founders understand how funding programs evaluate projects, what makes a project viable, and how to align with institutional priorities. Funding becomes a skill.
               </p>
             </Reveal>
           </div>
         </div>
 
-        {/* Team cards */}
         <div className="space-y-px bg-black/8">
           {team.map((member, i) => (
             <div key={member.name}>
               <Reveal delay={0.1 + i * 0.1}>
-                <div className="bg-white grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 lg:p-10
-                                group hover:bg-cool transition-colors duration-200">
-                  {/* Avatar + name */}
+                <div className="bg-white grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 lg:p-10 group hover:bg-cool transition-colors duration-200">
                   <div className="lg:col-span-3 flex items-start gap-5">
                     <div className="w-16 h-16 rounded-full shrink-0 overflow-hidden border-2 border-black/8">
                       <img src={member.photo} alt={member.name}
@@ -102,18 +97,15 @@ export default function VLCTeam() {
                     </div>
                   </div>
 
-                  {/* Expertise tags */}
                   <div className="lg:col-span-2 flex flex-col justify-start">
                     <p className="font-display text-xs uppercase tracking-widest text-black/30 mb-2">Focus</p>
                     <p className="font-display text-xs leading-[1.7] text-obsidian/75">{member.expertise}</p>
                   </div>
 
-                  {/* Bio */}
                   <div className="lg:col-span-4">
                     <p className="font-display text-base leading-[1.6] text-obsidian/80">{member.bio}</p>
                   </div>
 
-                  {/* VLC Role */}
                   <div className="lg:col-span-3">
                     <p className="font-display text-xs uppercase tracking-widest text-black/30 mb-2">Within VLC</p>
                     <p className="font-display text-sm leading-[1.6] text-obsidian/80 italic">
@@ -123,7 +115,6 @@ export default function VLCTeam() {
                 </div>
               </Reveal>
 
-              {/* Tobi advisory block */}
               {member.name === "Tobi Oladimeji" && (
                 <Reveal delay={0.25}>
                   <div className="bg-obsidian p-8 lg:p-10">
@@ -136,9 +127,7 @@ export default function VLCTeam() {
                           Strategy, systems, and data-driven decision-making for your venture.
                         </h3>
                         <p className="font-display text-base leading-[1.6] text-white/60">
-                          For founders who want to build smarter ecosystems, make better decisions with data, or
-                          structure their venture with clarity, book a one-on-one session with Tobi. Expect
-                          practical frameworks, ecosystem thinking, and tools that translate insight into action.
+                          For founders who want to build smarter ecosystems, make better decisions with data, or structure their venture with clarity, book a one-on-one session with Tobi. Expect practical frameworks, ecosystem thinking, and tools that translate insight into action.
                         </p>
                       </div>
                       <div className="lg:col-span-4 flex lg:justify-end">
@@ -154,7 +143,6 @@ export default function VLCTeam() {
                 </Reveal>
               )}
 
-              {/* Oyeta advisory block */}
               {member.name === "Oyeta Kokoroko" && (
                 <Reveal delay={0.25}>
                   <div className="bg-obsidian p-8 lg:p-10">
@@ -167,10 +155,7 @@ export default function VLCTeam() {
                           Venture positioning, brand credibility, and founder advisory.
                         </h3>
                         <p className="font-display text-base leading-[1.6] text-white/60">
-                          For founders who need deeper support refining their venture positioning, strengthening
-                          their brand credibility, or building a growth strategy that funders and customers take
-                          seriously. Direct advisory with Oyeta brings 9+ years of real-world venture building
-                          directly into your process.
+                          For founders who need deeper support refining their venture positioning, strengthening their brand credibility, or building a growth strategy that funders and customers take seriously. Direct advisory with Oyeta brings 9+ years of real-world venture building directly into your process.
                         </p>
                       </div>
                       <div className="lg:col-span-4 flex lg:justify-end">

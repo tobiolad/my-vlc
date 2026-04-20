@@ -18,28 +18,22 @@ function Reveal({ children, delay = 0 }) {
 
 const audiences = [
   {
-    label: "You're building something new",
-    cta:   "Join the next cohort. Work through your venture properly from the start.",
-    sub:   "Small group, real support. 10 spots.",
-    type:  "primary",
+    label: "For Founders",
+    cta: "Apply to the next Funding Readiness Lab",
+    sub: "Limited cohort. Early applications prioritised.",
+    type: "primary",
   },
   {
-    label: "You're already running something",
-    cta:   "Work directly with us on positioning, decisions, and what needs to happen next.",
-    sub:   "Book a session with Tobi or Oyeta.",
-    type:  "secondary",
+    label: "For Partners & Organisations",
+    cta: "Collaborate with us to design ecosystem-level programs",
+    sub: "Design initiatives that prepare entrepreneurs for real funding.",
+    type: "secondary",
   },
   {
-    label: "You run an organisation",
-    cta:   "Let's build something together that actually prepares the entrepreneurs you work with.",
-    sub:   "Design ecosystem-level programs.",
-    type:  "secondary",
-  },
-  {
-    label: "You fund or support ventures",
-    cta:   "We'd rather talk about what entrepreneurs need before they apply than after.",
-    sub:   "Partner with VLC.",
-    type:  "secondary",
+    label: "For Funders & Institutions",
+    cta: "Support initiatives that prepare entrepreneurs for real funding opportunities",
+    sub: "Partner with infrastructure connecting education and opportunity.",
+    type: "secondary",
   },
 ];
 
@@ -59,7 +53,7 @@ export default function VLCApply() {
           name: form.name,
           email: form.email,
           type: form.type,
-          message: form.message || "—",
+          message: form.message || "-",
         }),
       });
       setSubmitted(true);
@@ -86,13 +80,12 @@ export default function VLCApply() {
               <h2 id="apply-heading"
                 className="font-display font-black leading-[0.95] tracking-[-0.04em]
                            text-[clamp(2.25rem,4.5vw,3.75rem)] text-white">
-                If you're building something and you want to think through it properly —{" "}
-                <span className="text-cobalt">this is the right place.</span>
+                Build, partner, or support the next generation of fundable ventures.
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-8 font-display text-lg leading-[1.6] text-white/80">
-                Doesn't matter if you're at the start or already running. The work is the same. Get clear, structure it, figure out the next move.
+                Whether you are building a venture, supporting founders, or exploring partnerships, the Venture Learning Collective offers a way to engage.
               </p>
             </Reveal>
 
@@ -166,11 +159,10 @@ export default function VLCApply() {
                                    text-white font-display text-2xl font-semibold pb-3
                                    focus:outline-none focus:border-cobalt transition-colors
                                    min-h-[48px] appearance-none cursor-pointer">
-                        <option value="founder"  className="bg-obsidian">Early-stage founder</option>
-                        <option value="existing" className="bg-obsidian">Existing entrepreneur</option>
-                        <option value="partner"  className="bg-obsidian">Partner / Organisation</option>
-                        <option value="funder"   className="bg-obsidian">Funder / Institution</option>
-                        <option value="other"    className="bg-obsidian">Other</option>
+                        <option value="founder" className="bg-obsidian">Founder</option>
+                        <option value="partner" className="bg-obsidian">Partner / Organisation</option>
+                        <option value="funder" className="bg-obsidian">Funder / Institution</option>
+                        <option value="other" className="bg-obsidian">Other</option>
                       </select>
                     </div>
 
@@ -195,7 +187,7 @@ export default function VLCApply() {
                       </label>
                       <input id="message" value={form.message}
                         onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                        placeholder="figure out what I'm building / work on decisions / support the ecosystem"
+                        placeholder="build a fundable venture / partner with VLC / support the ecosystem"
                         className="w-full bg-transparent border-0 border-b-2 border-white/20
                                    text-white font-display text-xl font-semibold
                                    placeholder:text-white/20 pb-3 focus:outline-none

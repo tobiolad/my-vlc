@@ -13,7 +13,7 @@ export default function VLCFooter() {
               alt="The Venture Learning Collective"
               className="h-14 w-auto object-contain mb-4" />
             <p className="font-display text-sm leading-[1.6] text-obsidian/70 max-w-xs">
-              A nonprofit ecosystem for entrepreneurs who want to think clearly and build something real.
+              A nonprofit ecosystem platform connecting entrepreneurship education, funding literacy, and venture development.
             </p>
           </div>
 
@@ -21,11 +21,11 @@ export default function VLCFooter() {
             <p className="font-display text-xs uppercase tracking-widest text-black/30 mb-5">Navigate</p>
             <ul className="space-y-3">
               {[
-                { label: "The Problem",   href: "#problem" },
-                { label: "The Program",   href: "#program" },
+                { label: "The Problem", href: "#problem" },
+                { label: "The Program", href: "#program" },
                 { label: "Our Ecosystem", href: "#partners" },
-                { label: "The Team",      href: "#team" },
-                { label: "Get Involved",  href: "#apply" },
+                { label: "The Team", href: "#team" },
+                { label: "Apply", href: "#apply" },
               ].map(l => (
                 <li key={l.label}>
                   <a href={l.href}
@@ -43,16 +43,16 @@ export default function VLCFooter() {
               <li>
                 <a href="https://oyeta.systeme.io/founder-advisory" target="_blank" rel="noopener noreferrer"
                   className="font-display text-sm text-obsidian/70 hover:text-cobalt transition-colors block">
-                  Oyeta — Founder Advisory
+                  Oyeta - Founder Advisory
                 </a>
                 <p className="font-display text-xs text-black/35 mt-0.5">Venture positioning & brand strategy</p>
               </li>
               <li>
                 <a href="https://calendar.app.google/mAEjbipQGoAxTW426" target="_blank" rel="noopener noreferrer"
                   className="font-display text-sm text-obsidian/70 hover:text-cobalt transition-colors block">
-                  Tobi — 1:1 Session
+                  Tobi - 1:1 Session
                 </a>
-                <p className="font-display text-xs text-black/35 mt-0.5">Ecosystem design & decision-making</p>
+                <p className="font-display text-xs text-black/35 mt-0.5">Ecosystem design & funding systems</p>
               </li>
             </ul>
           </div>
@@ -60,7 +60,7 @@ export default function VLCFooter() {
           <div>
             <p className="font-display text-xs uppercase tracking-widest text-black/30 mb-5">The Pathway</p>
             <div className="flex flex-wrap items-center gap-2 mb-8">
-              {["Thinking", "Structuring", "Deciding", "Growing"].map((s, i, arr) => (
+              {["Learning", "Structuring", "Funding", "Execution"].map((s, i, arr) => (
                 <div key={s} className="flex items-center gap-2">
                   <span className="font-display text-sm font-semibold text-obsidian">{s}</span>
                   {i < arr.length - 1 && <ArrowRight className="w-3 h-3 text-black/25 shrink-0" />}
