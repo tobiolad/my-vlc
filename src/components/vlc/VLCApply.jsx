@@ -18,21 +18,27 @@ function Reveal({ children, delay = 0 }) {
 
 const audiences = [
   {
-    label: "For Founders",
-    cta:   "Apply to the next Funding Readiness Lab",
-    sub:   "Limited cohort. Early applications prioritised.",
+    label: "You're building something new",
+    cta:   "Join the next cohort. Work through your venture properly from the start.",
+    sub:   "Small group, real support. 10 spots.",
     type:  "primary",
   },
   {
-    label: "For Partners & Organisations",
-    cta:   "Collaborate with us to design ecosystem-level programs",
-    sub:   "Design initiatives that prepare entrepreneurs for real funding.",
+    label: "You're already running something",
+    cta:   "Work directly with us on positioning, decisions, and what needs to happen next.",
+    sub:   "Book a session with Tobi or Oyeta.",
     type:  "secondary",
   },
   {
-    label: "For Funders & Institutions",
-    cta:   "Support initiatives that prepare entrepreneurs for real funding opportunities",
-    sub:   "Partner with infrastructure connecting education and opportunity.",
+    label: "You run an organisation",
+    cta:   "Let's build something together that actually prepares the entrepreneurs you work with.",
+    sub:   "Design ecosystem-level programs.",
+    type:  "secondary",
+  },
+  {
+    label: "You fund or support ventures",
+    cta:   "We'd rather talk about what entrepreneurs need before they apply than after.",
+    sub:   "Partner with VLC.",
     type:  "secondary",
   },
 ];
@@ -68,7 +74,6 @@ export default function VLCApply() {
       aria-labelledby="apply-heading">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-        {/* Header */}
         <Reveal>
           <p className="font-display text-xs uppercase tracking-[0.18em] text-white/60 mb-12">
             Get Involved
@@ -76,24 +81,21 @@ export default function VLCApply() {
         </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
-          {/* Left copy */}
           <div className="lg:col-span-5">
             <Reveal delay={0.1}>
               <h2 id="apply-heading"
                 className="font-display font-black leading-[0.95] tracking-[-0.04em]
                            text-[clamp(2.25rem,4.5vw,3.75rem)] text-white">
-                Build, partner, or support the next generation of{" "}
-                <span className="text-cobalt">fundable ventures.</span>
+                If you're building something and you want to think through it properly —{" "}
+                <span className="text-cobalt">this is the right place.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-8 font-display text-lg leading-[1.6] text-white/80">
-                Whether you are building a venture, supporting founders, or exploring
-                partnerships, the Venture Learning Collective offers a way to engage.
+                Doesn't matter if you're at the start or already running. The work is the same. Get clear, structure it, figure out the next move.
               </p>
             </Reveal>
 
-            {/* Audience tracks */}
             <div className="mt-12 space-y-px">
               {audiences.map((a, i) => (
                 <Reveal key={a.label} delay={0.25 + i * 0.08}>
@@ -119,18 +121,16 @@ export default function VLCApply() {
             </div>
           </div>
 
-          {/* Right — form */}
           <div className="lg:col-span-7">
             <Reveal delay={0.2}>
               {submitted ? (
                 <div className="flex flex-col items-start justify-center h-full min-h-[400px]">
                   <CheckCircle className="w-12 h-12 text-cobalt mb-6" />
                   <h3 className="font-display font-black text-3xl tracking-[-0.03em] text-white mb-4">
-                    Application received.
+                    Got it.
                   </h3>
                   <p className="font-display text-lg leading-[1.6] text-white/50">
-                    We'll be in touch shortly. Thank you for your interest in the Venture
-                    Learning Collective.
+                    We'll be in touch shortly. Thank you for reaching out to the Venture Learning Collective.
                   </p>
                 </div>
               ) : (
@@ -140,7 +140,6 @@ export default function VLCApply() {
                     Tell us about yourself. We'll reach out with next steps.
                   </p>
 
-                  {/* Mad-libs style fields */}
                   <div className="space-y-10">
                     <div>
                       <label htmlFor="name"
@@ -167,10 +166,11 @@ export default function VLCApply() {
                                    text-white font-display text-2xl font-semibold pb-3
                                    focus:outline-none focus:border-cobalt transition-colors
                                    min-h-[48px] appearance-none cursor-pointer">
-                        <option value="founder" className="bg-obsidian">Founder</option>
-                        <option value="partner" className="bg-obsidian">Partner / Organisation</option>
-                        <option value="funder" className="bg-obsidian">Funder / Institution</option>
-                        <option value="other"   className="bg-obsidian">Other</option>
+                        <option value="founder"  className="bg-obsidian">Early-stage founder</option>
+                        <option value="existing" className="bg-obsidian">Existing entrepreneur</option>
+                        <option value="partner"  className="bg-obsidian">Partner / Organisation</option>
+                        <option value="funder"   className="bg-obsidian">Funder / Institution</option>
+                        <option value="other"    className="bg-obsidian">Other</option>
                       </select>
                     </div>
 
@@ -195,7 +195,7 @@ export default function VLCApply() {
                       </label>
                       <input id="message" value={form.message}
                         onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                        placeholder="build a fundable venture / partner with VLC / support the ecosystem"
+                        placeholder="figure out what I'm building / work on decisions / support the ecosystem"
                         className="w-full bg-transparent border-0 border-b-2 border-white/20
                                    text-white font-display text-xl font-semibold
                                    placeholder:text-white/20 pb-3 focus:outline-none

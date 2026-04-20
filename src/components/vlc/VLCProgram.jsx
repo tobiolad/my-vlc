@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, ArrowUpRight, CheckCircle } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle, Calendar } from "lucide-react";
 
 function Reveal({ children, delay = 0 }) {
   const ref = useRef(null);
@@ -19,44 +19,42 @@ function Reveal({ children, delay = 0 }) {
 const weeks = [
   {
     num: "01",
-    title: "Venture Structuring & Positioning",
+    title: "Getting the venture clear",
     items: [
-      "Define a fundable, high-potential venture",
-      "Clarify your positioning and value",
-      "Build a realistic and credible project scope",
-      "Identify what makes your idea worth funding",
+      "What your project actually is and who it's for",
+      "The difference between an idea and a structured, workable project",
+      "Building a realistic scope, timeline, and budget",
     ],
-    outcome: "A fully structured, fundable project blueprint",
+    outcome: "A fully structured project blueprint",
   },
   {
     num: "02",
-    title: "Aligning with real funding opportunities",
+    title: "Finding where it fits",
     items: [
-      "Learn how to think like a funder",
-      "Identify grants aligned with your project",
-      "Understand eligibility, criteria, and positioning",
+      "How to read what funders and institutions are actually looking for",
+      "Matching your project to real, active opportunities",
+      "Understanding eligibility without guesswork",
     ],
-    outcome: "A shortlist of relevant, high-fit funding opportunities",
+    outcome: "A shortlist of at least 3 high-fit, matched opportunities",
   },
   {
     num: "03",
-    title: "Narrative, Credibility & Funder Perception",
+    title: "Saying it in a way that lands",
     items: [
-      "Craft a compelling, fundable narrative",
-      "Position your venture for credibility and trust",
-      "Avoid common mistakes that weaken applications",
-      "Prepare your project for real-world evaluation",
+      "How to answer complex application questions clearly",
+      "What makes a narrative credible — and what kills it",
+      "Drafting, reviewing, and preparing for real submission",
     ],
-    outcome: "A draft-ready application and pitch-ready project",
+    outcome: "A draft-ready application and a pitch-ready project",
   },
 ];
 
 const participantLeaves = [
-  "A fully structured, funding-ready project",
-  "Aligned grant opportunities matched to their project",
-  "A strong understanding of how funders evaluate proposals",
-  "A refined narrative ready for submission or pitching",
-  "Practical tools to move from idea to execution",
+  "A venture description that actually makes sense to people outside your head",
+  "A way of making decisions you can keep using after the cohort",
+  "Real opportunities identified — not a generic list, things that actually fit",
+  "A way of talking about what you're building that works in any context",
+  "A clear next step, not just motivation",
 ];
 
 export default function VLCProgram() {
@@ -67,43 +65,55 @@ export default function VLCProgram() {
 
         <Reveal>
           <p className="font-display text-xs uppercase tracking-[0.18em] text-black mb-3">
-            Pilot Program
+            First Cohort Program
           </p>
           <p className="font-display text-xs uppercase tracking-[0.12em] text-black/50 mb-12">
-            Youth Funding Readiness Lab · In partnership with GRANTED
+            In partnership with GRANTED
           </p>
         </Reveal>
 
         {/* Header row */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-12">
           <div className="lg:col-span-6">
             <Reveal delay={0.1}>
               <h2 id="program-heading"
                 className="font-display font-black leading-[0.95] tracking-[-0.04em]
                            text-[clamp(2.25rem,4.5vw,3.75rem)] text-obsidian">
-                A 3-week structured pathway to becoming{" "}
-                <span className="text-cobalt">funding-ready.</span>
+                Three weeks to actually work through{" "}
+                <span className="text-cobalt">what you're building.</span>
               </h2>
             </Reveal>
           </div>
           <div className="lg:col-span-6 lg:pt-2">
             <Reveal delay={0.2}>
               <p className="font-display text-lg leading-[1.6] text-obsidian/80">
-                The Funding Readiness Lab is a focused, high-impact 3-week accelerator
-                combining strategic guidance and hands-on implementation. Each week follows
-                a Strategy + Implementation model.
+                The Funding Readiness Lab came out of a simple observation — most founders trying to access opportunities aren't stuck because of the opportunity. They're stuck because the venture itself isn't clear enough yet. This program works on that. Funding is one place it can take you. Clarity is the starting point.
               </p>
             </Reveal>
             <Reveal delay={0.3}>
               <p className="mt-4 font-display text-base leading-[1.6] text-obsidian/70">
-                Our first cohort is intentionally small and high-touch. We work closely with
-                a select group of founders to develop high-quality, fundable projects.
+                Small cohort of 10. Every week pairs a strategy session led by Tobi and Oyeta with a hands-on lab session powered by GRANTED's tools.
               </p>
             </Reveal>
           </div>
         </div>
 
-        {/* Week cards — bento */}
+        {/* Urgency block */}
+        <Reveal delay={0.35}>
+          <div className="mb-16 flex items-center gap-4 p-5 bg-cobalt/8 border border-cobalt/20 rounded-sm">
+            <Calendar className="w-5 h-5 text-cobalt shrink-0" />
+            <p className="font-display text-sm text-obsidian">
+              <span className="font-bold">Free info session — May 4, 2026 at 6PM EST.</span>{" "}
+              Open to all. 10 spots in the cohort. Youth founders prioritised.
+            </p>
+            <a href="https://tally.so/r/ZjVWGe" target="_blank" rel="noopener noreferrer"
+              className="ml-auto shrink-0 inline-flex items-center gap-1.5 font-display font-bold text-sm text-cobalt hover:underline">
+              Register free <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </Reveal>
+
+        {/* Week cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-black/8">
           {weeks.map((w, i) => (
             <Reveal key={w.num} delay={0.1 + i * 0.1}>
@@ -154,14 +164,15 @@ export default function VLCProgram() {
                   Funding Readiness Showcase
                 </h3>
                 <p className="font-display text-base leading-[1.6] text-obsidian/80">
-                  Participants present their fully developed, fundable projects. All who complete
-                  receive a completion honorarium. The most viable project is awarded a{" "}
-                  <strong className="text-obsidian">micro-grant</strong> to support early execution.
+                  Everyone who completes the program walks away with something built — not just learned. The founder with the most viable project wins a micro-grant to run their first pilot.
+                </p>
+                <p className="mt-3 font-display text-xs text-obsidian/40 italic">
+                  $100 completion honorarium for all participants · $400 micro-grant for the winner
                 </p>
               </div>
               <div>
                 <p className="font-display font-semibold text-sm text-obsidian mb-4">
-                  Participants leave with:
+                  You leave with:
                 </p>
                 <ul className="space-y-2">
                   {participantLeaves.map(item => (
@@ -185,15 +196,15 @@ export default function VLCProgram() {
                          shadow-lg shadow-cobalt/20">
               Apply to the next cohort <ArrowRight className="w-5 h-5" />
             </a>
-            <a href="#apply"
+            <a href="https://tally.so/r/ZjVWGe" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 h-14 px-8 rounded-full border border-black/15
                          text-obsidian font-display font-medium text-base hover:bg-cool transition-colors
                          min-h-[48px]">
-              Join the waitlist <ArrowRight className="w-4 h-4" />
+              Join the free info session — May 4 <ArrowRight className="w-4 h-4" />
             </a>
           </div>
           <p className="mt-4 font-display text-xs text-black/35 tracking-wider">
-            Small cohort. Practical, hands-on support. No prior funding experience required.
+            10 spots. Youth founders. Free to apply.
           </p>
         </Reveal>
       </div>

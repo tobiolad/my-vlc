@@ -16,19 +16,19 @@ function Reveal({ children, delay = 0 }) {
 }
 
 const pillars = [
-  { title: "Entrepreneurship Education", desc: "Build the foundations that every fundable venture needs." },
-  { title: "Funding Literacy",            desc: "Understand how funding systems evaluate and select projects." },
-  { title: "Venture Development",         desc: "Structure your idea into a viable, submittable project." },
-  { title: "Decision Intelligence",       desc: "Translate data and insight into strategic action." },
-  { title: "Real-World Execution",        desc: "Move from concept to measurable, market-ready outcomes." },
+  { title: "Venture Development",       desc: "Taking what you have and building it into something structured and explainable." },
+  { title: "Decision Intelligence",     desc: "Getting clear on what to do next — and what to stop doing." },
+  { title: "Entrepreneurship Education",desc: "The foundations that serious ventures actually run on." },
+  { title: "Real-World Execution",      desc: "Moving from figuring it out to actually doing it." },
+  { title: "Funding Literacy",          desc: "Understanding how funding works, when that becomes relevant." },
 ];
 
 const helps = [
-  "Structure projects with clear outcomes",
-  "Align ideas with funding opportunities",
-  "Build realistic budgets and timelines",
-  "Communicate their vision effectively",
-  "Translate concepts into executable ventures",
+  "Figure out what the business actually is and who it's really for",
+  "Build a structure that holds up when someone asks hard questions",
+  "Make decisions more deliberately, with less second-guessing",
+  "Position it so the right people understand it immediately",
+  "When the time comes — and only then — approach funding from a place of clarity",
 ];
 
 export default function VLCSolution() {
@@ -39,40 +39,33 @@ export default function VLCSolution() {
 
         <Reveal>
           <p className="font-display text-xs uppercase tracking-[0.18em] text-black mb-12">
-            A New Approach
+            What VLC Actually Does
           </p>
         </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          {/* Heading */}
           <div className="lg:col-span-5">
             <Reveal delay={0.1}>
               <h2 id="solution-heading"
                 className="font-display font-black leading-[0.95] tracking-[-0.04em]
                            text-[clamp(2.25rem,4.5vw,3.75rem)] text-obsidian">
-                An ecosystem for building{" "}
-                <span className="text-cobalt">fundable</span>{" "}
-                ventures.
+                It's not a course. It's not a consulting service.{" "}
+                <span className="text-cobalt">It's infrastructure for building something real.</span>
               </h2>
             </Reveal>
 
             <Reveal delay={0.2}>
               <p className="mt-8 font-display text-lg leading-[1.6] text-obsidian/80">
-                The Venture Learning Collective is a nonprofit ecosystem platform designed
-                to help entrepreneurs move beyond ideas and build ventures that are
-                structured, fundable, and positioned for long-term growth. Founders are
-                guided by operators with real-world experience building and positioning
-                ventures that generate revenue and attract funding.
+                Most entrepreneurs don't need more information. They need someone to help them work through what they actually have — and what it needs to become. That's what this is. We bring together real experience in data, venture building, and decision-making, and we help founders use it.
               </p>
             </Reveal>
 
             <Reveal delay={0.3}>
               <p className="mt-6 font-display text-base leading-[1.6] text-obsidian/80">
-                We connect five layers into one integrated system:
+                Five layers, working together:
               </p>
             </Reveal>
 
-            {/* Pillars */}
             <ul className="mt-6 space-y-0">
               {pillars.map((p, i) => (
                 <Reveal key={p.title} delay={0.35 + i * 0.06}>
@@ -88,17 +81,12 @@ export default function VLCSolution() {
             </ul>
           </div>
 
-          {/* Right — what we help with */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             <Reveal delay={0.15}>
               <div className="bg-obsidian text-white p-10 lg:p-14 rounded-sm">
-                <p className="font-display text-xs uppercase tracking-widest text-white/35 mb-8">
-                  From idea → to fundable venture
-                </p>
                 <h3 className="font-display font-black text-[clamp(1.75rem,3vw,2.5rem)]
                                 leading-[1.05] tracking-[-0.03em] mb-8">
-                  Strong ideas fail not because they lack potential. Founders
-                                     are rarely taught how to structure them.
+                  Strong ideas stall when the thinking behind them hasn't been worked out.
                 </h3>
                 <p className="font-display text-base leading-[1.6] text-white/80 mb-10">
                   We help entrepreneurs:
