@@ -23,7 +23,7 @@ const team = [
     initials: "TO",
     photo: "https://res.cloudinary.com/daznfclhz/image/upload/v1776545831/TOBI-OLADIMEJI-FOUNDER.jpg_1_vhlj8m.png",
     expertise: "Ecosystem Design · Funding Systems · Decision Intelligence",
-    bio: "A data professional, product founder, and ecosystem builder. He leads Data Fellows and co-founded Inscend, building systems that translate data into decisions and designing ecosystems that connect learning, tools, and real-world execution.",
+    bio: "A data professional, product founder, and ecosystem builder. He leads Data Fellows and founded Inscend, building systems that translate data into decisions and designing ecosystems that connect learning, tools, and real-world execution.",
     vlcRole: "Brings expertise in ecosystem design, funding systems, and the development of practical frameworks that support more informed and effective decision-making.",
     linkedin: "https://www.linkedin.com/in/tobioladimeji/",
   },
@@ -41,7 +41,7 @@ const team = [
 
 export default function VLCTeam() {
   return (
-    <section id="team" className="bg-white py-32 lg:py-40 border-t border-black/8"
+    <section id="team" className="bg-white py-24 lg:py-32 border-t border-black/8"
       aria-labelledby="team-heading">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
@@ -51,33 +51,24 @@ export default function VLCTeam() {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
-          <div className="lg:col-span-5">
-            <Reveal delay={0.1}>
-              <h2 id="team-heading"
-                className="font-display font-black leading-[0.95] tracking-[-0.04em]
-                           text-[clamp(2.25rem,4.5vw,3.75rem)] text-obsidian">
-                The team<br />
-                behind the<br />
-                <span className="text-cobalt">collective.</span>
-              </h2>
-            </Reveal>
-          </div>
-          <div className="lg:col-span-7 lg:pt-2">
-            <Reveal delay={0.2}>
-              <p className="font-display text-lg leading-[1.6] text-obsidian/80">
-                Funding is not just access. It is a capability. We help founders understand how funding programs evaluate projects, what makes a project viable, and how to align with institutional priorities. Funding becomes a skill.
-              </p>
-            </Reveal>
-          </div>
+        <div className="mb-16">
+          <Reveal delay={0.1}>
+            <h2 id="team-heading"
+              className="font-display font-black leading-[0.95] tracking-[-0.04em]
+                         text-[clamp(2.25rem,4.5vw,3.75rem)] text-obsidian max-w-2xl">
+              The team<br />
+              behind the<br />
+              <span className="text-cobalt">collective.</span>
+            </h2>
+          </Reveal>
         </div>
 
         <div className="space-y-px bg-black/8">
           {team.map((member, i) => (
             <div key={member.name}>
               <Reveal delay={0.1 + i * 0.1}>
-                <div className="bg-white grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 lg:p-10 group hover:bg-cool transition-colors duration-200">
-                  <div className="lg:col-span-3 flex items-start gap-5">
+                <div className="bg-white grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 p-6 sm:p-8 lg:p-10 group hover:bg-cool transition-colors duration-200">
+                  <div className="lg:col-span-3 flex items-start gap-4 sm:gap-5">
                     <div className="w-16 h-16 rounded-full shrink-0 overflow-hidden border-2 border-black/8">
                       <img src={member.photo} alt={member.name}
                         className="w-full h-full object-cover object-top" />
@@ -117,8 +108,8 @@ export default function VLCTeam() {
 
               {member.name === "Tobi Oladimeji" && (
                 <Reveal delay={0.25}>
-                  <div className="bg-obsidian p-8 lg:p-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                  <div className="bg-obsidian p-6 sm:p-8 lg:p-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
                       <div className="lg:col-span-8">
                         <p className="font-display text-xs uppercase tracking-widest text-white/40 mb-3">
                           Work more closely with Tobi
@@ -132,9 +123,7 @@ export default function VLCTeam() {
                       </div>
                       <div className="lg:col-span-4 flex lg:justify-end">
                         <a href="https://calendar.app.google/mAEjbipQGoAxTW426" target="_blank" rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 h-12 px-7 rounded-full border border-white/20
-                                     text-white font-display font-semibold text-sm hover:bg-white/10 transition-colors
-                                     min-h-[48px]">
+                          className="inline-flex items-center gap-2 h-12 px-7 rounded-full border border-white/20 text-white font-display font-semibold text-sm hover:bg-white/10 transition-colors min-h-[48px] w-full sm:w-auto justify-center">
                           Book a session <ArrowRight className="w-4 h-4" />
                         </a>
                       </div>
@@ -145,8 +134,8 @@ export default function VLCTeam() {
 
               {member.name === "Oyeta Kokoroko" && (
                 <Reveal delay={0.25}>
-                  <div className="bg-obsidian p-8 lg:p-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                  <div className="bg-obsidian p-6 sm:p-8 lg:p-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
                       <div className="lg:col-span-8">
                         <p className="font-display text-xs uppercase tracking-widest text-white/40 mb-3">
                           Work more closely with Oyeta
@@ -160,9 +149,7 @@ export default function VLCTeam() {
                       </div>
                       <div className="lg:col-span-4 flex lg:justify-end">
                         <a href="https://oyeta.systeme.io/founder-advisory" target="_blank" rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 h-12 px-7 rounded-full border border-white/20
-                                     text-white font-display font-semibold text-sm hover:bg-white/10 transition-colors
-                                     min-h-[48px]">
+                          className="inline-flex items-center gap-2 h-12 px-7 rounded-full border border-white/20 text-white font-display font-semibold text-sm hover:bg-white/10 transition-colors min-h-[48px] w-full sm:w-auto justify-center">
                           Explore founder advisory <ArrowRight className="w-4 h-4" />
                         </a>
                       </div>

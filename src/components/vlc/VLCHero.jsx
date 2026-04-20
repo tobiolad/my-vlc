@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 28 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
+  initial:   { opacity: 0, y: 28 },
+  animate:   { opacity: 1, y: 0 },
+  transition:{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
 });
 
 export default function VLCHero() {
@@ -14,7 +14,7 @@ export default function VLCHero() {
 
       <div className="absolute top-0 right-0 w-px h-full bg-black/5 hidden lg:block" />
 
-      <div className="max-w-7xl mx-auto w-full px-6 lg:px-10 pt-28 pb-20 lg:py-0 grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center lg:min-h-screen">
+      <div className="max-w-7xl mx-auto w-full px-6 lg:px-10 pt-24 pb-16 lg:py-0 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center lg:min-h-screen">
 
         <div className="lg:col-span-7 flex flex-col justify-center">
           <motion.p {...fadeUp(0.1)}
@@ -23,37 +23,37 @@ export default function VLCHero() {
           </motion.p>
 
           <motion.h1 {...fadeUp(0.2)} id="hero-heading"
-            className="font-display font-black text-obsidian leading-[1.15] tracking-[-0.03em]
-                       text-[clamp(1.75rem,3.5vw,3.25rem)]">
-            From idea to fundable venture.
+            className="font-display font-black text-obsidian leading-[1.02] tracking-[-0.03em]
+                       text-[clamp(2.25rem,5vw,4.75rem)] max-w-3xl">
+            From idea to <span className="text-cobalt">fundable venture.</span>
           </motion.h1>
 
           <motion.p {...fadeUp(0.35)}
-            className="mt-8 font-display text-lg leading-[1.6] text-obsidian/80 max-w-xl">
+            className="mt-8 font-display text-base sm:text-lg leading-[1.75] text-obsidian/80 max-w-2xl">
             We work with founders at every stage: from those just starting out to those already running a business. To structure, position, and develop ventures that can secure funding, grow sustainably, and create a real-world impact.
           </motion.p>
 
           <motion.div {...fadeUp(0.5)} className="mt-10 flex flex-col sm:flex-row gap-4">
             <a href="https://tally.so/r/ZjVWGe" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 h-14 px-8 rounded-full bg-cobalt text-white
+              className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-cobalt text-white
                          font-display font-bold text-base hover:bg-cobalt/90 transition-colors
-                         min-h-[48px] shadow-lg shadow-cobalt/20">
+                         min-h-[48px] shadow-lg shadow-cobalt/20 w-full sm:w-auto">
               Join next cohort <ArrowRight className="w-5 h-5" />
             </a>
             <a href="#program"
-              className="inline-flex items-center gap-2 h-14 px-8 rounded-full border border-black/15
+              className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-full border border-black/15
                          text-obsidian font-display font-medium text-base hover:bg-cool transition-colors
-                         min-h-[48px]">
+                         min-h-[48px] w-full sm:w-auto">
               See how it works <ArrowRight className="w-4 h-4" />
             </a>
           </motion.div>
         </div>
 
         <motion.div {...fadeUp(0.45)}
-          className="lg:col-span-5 flex flex-col gap-4 mt-12 lg:mt-0">
+          className="lg:col-span-5 flex flex-col gap-3 mt-4 lg:mt-0 max-w-xl lg:max-w-none mx-auto w-full">
 
           <div className="grid grid-cols-2 gap-3">
-            <div className="col-span-2 relative overflow-hidden rounded-sm aspect-[16/7]">
+            <div className="col-span-2 relative overflow-hidden rounded-sm aspect-[16/8] sm:aspect-[16/7]">
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
                 alt="Entrepreneurs collaborating"
