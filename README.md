@@ -2,7 +2,7 @@
 
 Marketing and application site for the **Venture Learning Collective**, an entrepreneurship and funding-readiness initiative I co-founded with Oyeta Kokoroko. VLC ran a cohort-based program that helped early-stage founders turn an idea into a structured, fundable venture.
 
-The flagship program was the **Funding Readiness Lab**, a 3-week cohort delivered in partnership with [GRANTED](https://granted.tech), pairing a strategy session each week with a hands-on lab. It culminated in a project showcase, with a micro-grant awarded to the strongest project. The initiative was supported by a C$2,800 micro-grant from Weston Frontlines.
+The flagship program was the **Youth Funding Readiness Lab**, a 3-week cohort delivered in partnership with [GRANTED](https://granted.tech), pairing a strategy session each week with a hands-on lab. The program was supported by a C$2,800 micro-grant from Weston Frontlines, and culminated in a project showcase with prizes for participants.
 
 This repo is the public-facing site: the program description, the ecosystem it sits in, the team behind it, and the application form.
 
